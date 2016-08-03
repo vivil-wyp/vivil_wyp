@@ -1,0 +1,637 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>御花坊</title>
+<link rel="stylesheet" type="text/css" href="cssflower.css"/>
+<script language="javascript" src="javascriptflower.js">
+</script>
+</head>
+
+<body>
+<!--********************logo栏*********************-->
+<div class="logoDiv">
+<img src="resource/logo.jpg" class="logoPicture"> <!--*logo栏马头图片*-->
+</div>
+<img style="position:absolute;left:280px;height:250px;"src="resource/yuhuafang.png" /> <!--*logo栏“御花坊”文字图片*-->
+<div class="searchDiv">  <!--*logo栏搜索框*-->
+<input style=" height:35px; position:absolute; top:7px; left:10px;" type="text"name="searchText" id="search" size=60 placeholder="全国同城送花到家" /><input type="button" class="search" value="搜索"style="border:0px;color:#FFFFFF; background-color:#009966;" onclick="Search()"/>
+</div>
+<div class="happy"> <!--*logo栏“快乐其实很简单”图片*-->
+<img src="resource/happy.png" onclick="openself()"/>
+</div>
+<!--***************用户登录链接*********************-->
+<div class="Userlogon" id="Userlogon">
+<a id="userlogon" href="#" onclick="myLogon()">用户登录</a> <!--*logo栏“用户登录”文字*-->
+</div>
+<div class="UserlogonDiv" id="UserlogonDiv"> <!--*弹出页面里的登录Div*-->
+    <div class="LogontitleDiv">
+	登录
+	</div>
+	<div class="LogoncloseDiv" id="Logonclose">
+	<input type="button"  name="myclose" style="border:0px;font-size:16px; color:#FFFFFF; background-color:#0066FF;width:40px;height:25px;" value="关闭" onclick="myClose()">
+	</div>
+	<div class="LogonDiv">
+	<div class="UsernameDiv">用户名：<input type="text" name="username" id="userName" size=15 placeholder="请输入用户名"></div>
+	<div class="UserpasswordDiv">密码：<input type="password" name="userpassword" id="userName" size=15 placeholder="请输入用户密码"></div>
+	<div class="resetDiv"><input style="border-color:#0066FF; background-color:#0066FF; font-weight:600px; font-size:14px; color:#FFFFFF;width:70px;height:30px; "type=reset name="reset" value="重置" onclick="judge2()"></div>
+    <div class="submitDiv"><input style="border-color:#0066FF;background-color:#0066FF; font-weight:600px; font-size:14px; color:#FFFFFF;width:70px;height:30px;" type=submit name="submit" value="登录" onclick="judge()"></div>
+	</div>
+	<div class="zhuceDiv">
+	<a href="#">新用户注册</a>
+	</div>
+	<div class="forgetpassDiv">
+	<a href="#">忘记密码</a>
+	</div>
+</div>
+
+<div class="Userlogon1" id="Userlogon1">
+<a id="userlogon" href="#" onclick="myLogon1()">用户注册</a><!--*logo栏“用户注册”文字*-->
+</div>
+<div class="UserlogonDiv" id="UserlogonDiv1"><!--*弹出页面里的注册Div*-->
+    <div class="LogontitleDiv">
+	注册
+	</div>
+	<div class="LogoncloseDiv" id="Logonclose1">
+	<input type="button"  name="myclose" style="border:0px;font-size:16px; color:#FFFFFF; background-color:#0066FF;width:40px;height:25px;" value="关闭" onclick="myClose()">
+	</div>
+	<div class="LogonDiv">
+	<div class="UsernameDiv">用户名：<input type="text" name="username" id="userName" size=15 placeholder="请输入用户名"></div>
+	<div class="UserpasswordDiv">密码：<input type="password" name="userpassword" id="userName" size=15 placeholder="请输入用户密码"></div>
+	<div class="UserpasswordDiv1">确认密码：<input type="password" name="userpassword2" id="userName" size=15 placeholder="请输入用户密码"></div>
+	<div class="resetDiv"><input style="border-color:#0066FF; background-color:#0066FF; font-weight:600px; font-size:14px; color:#FFFFFF;width:70px;height:30px; "type=reset name="reset" value="重置" onclick="judge2()"></div>
+    <div class="submitDiv"><input style="border-color:#0066FF;background-color:#0066FF; font-weight:600px; font-size:14px; color:#FFFFFF;width:70px;height:30px;" type=submit name="submit" value="注册" onclick="judge()"></div>
+	</div>
+</div>
+<!--**************************顶部导航栏**************************-->
+<div class="navigationDiv"><!--*最外层导航栏Div*-->
+ <div class="TopDiv1" onmouseover="show('T1')"  onmouseout="latent('T1')"><!--*放“鲜花速递”和其小菜单Div*-->
+   <div class="NDiv">
+   <!--*文字前的小花图片*-->
+   <img class="navigationFont" style=" width:25px; height:25px; position:absolute;top:12px;left:0px;" src="resource/topNavigation1.jpg" />
+   <span title="鲜花速递" class="navigationFont"> 鲜花速递</span> <!--*放“鲜花速递”的Div*-->
+   </div>
+   <div  class="TliDiv" id="T1"><!--*放下拉小菜单的Div*-->
+   <ul>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">礼物花卉</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">装饰花卉</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">可食花卉</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">花卉香薰</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">同城花店</a><br/>
+	   </li>
+      </ul>
+    </div>
+ </div>
+
+<div class="TopDiv2" onmouseover="show('T2')"  onmouseout="latent('T2')">
+  <div class="NDiv">
+  <img class="navigationFont" style=" width:25px; height:25px; position:absolute;top:12px;left:0px;" src="resource/topNavigation1.jpg" />
+  <span title="绿植盆栽" class="navigationFont">绿植盆栽</span>  
+  </div>
+  <div  class="TliDiv" id="T2"><!--*放下拉小菜单的Div*-->
+  <ul>
+	  <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">DYI多肉组合</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">迷你植物</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">抗辐射类</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">苔藓类</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">长青植物</a><br/>
+	   </li>
+      </ul>
+   </div>
+  </div>
+</div>
+
+<div class="TopDiv3" onmouseover="show('T3')"  onmouseout="latent('T3')">
+ <div class="NDiv">
+ <img class="navigationFont" style=" width:25px; height:25px; position:absolute;top:12px;left:0px;" src="resource/topNavigation1.jpg" />
+  <span title="花卉标本" class="navigationFont">花卉标本</span> 
+  </div>
+ <div  class="TliDiv" id="T3"><!--*放下拉小菜单的Div*-->
+  <ul>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">鲜花标本</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">香草标本</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">花卉饰品</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">书签标本</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">盒装标本</a><br/>
+	   </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<div class="TopDiv4" onmouseover="show('T4')"  onmouseout="latent('T4')">
+ <div class="NDiv">
+ <img class="navigationFont" style=" width:25px; height:25px; position:absolute;top:12px;left:0px;" src="resource/topNavigation1.jpg" />
+  <span title="花卉种植" class="navigationFont">花卉种植</span>
+ </div>
+ <div  class="TliDiv" id="T4"><!--*放下拉小菜单的Div*-->
+  <ul>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">花卉种子</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">花卉幼苗</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">花卉肥料</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">花卉泥土</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">花盆</a><br/>
+	   </li>
+    </ul>
+  </div>
+</div>
+ 
+ <div class="TopDiv5" onmouseover="show('T5')"  onmouseout="latent('T5')">
+ <div class="NDiv">
+ <img class="navigationFont" style=" width:25px; height:25px; position:absolute;top:12px;left:0px;" src="resource/topNavigation1.jpg" />
+  <span title="花卉包装" class="navigationFont">花卉包装</span>
+ </div>
+ <div  class="TliDiv" id="T5"><!--*放下拉小菜单的Div*-->
+  <ul>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">礼盒包装</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">花篮包装</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">花环</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">花球</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">新娘捧花</a><br/>
+	   </li>
+    </ul>
+  </div>
+ </div>
+ 
+ <div class="TopDiv6" onmouseover="show('T6')"  onmouseout="latent('T6')">
+ <div class="NDiv">
+ <img class="navigationFont" style=" width:25px; height:25px; position:absolute;top:12px;left:0px;" src="resource/topNavigation1.jpg" />
+  <span title="特色花卉" class="navigationFont">特色花卉</span>
+ </div>
+ <div  class="TliDiv" id="T6"><!--*放下拉小菜单的Div*-->
+  <ul>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">卡通花束</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">糖果花束</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">纸质花束</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">花卉用品</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">花卉刺绣</a><br/>
+	   </li>
+    </ul>
+  </div>
+ </div>
+ 
+ <div class="TopDiv7" onmouseover="show('T7')"  onmouseout="latent('T7')">
+ <div class="NDiv">
+ <img class="navigationFont" style=" width:25px; height:25px; position:absolute;top:12px;left:0px;" src="resource/topNavigation1.jpg" />
+  <span title="花卉简介" class="navigationFont">花卉简介</span>
+ </div>
+ <div  class="TliDiv" id="T7"><!--*放下拉小菜单的Div*-->
+  <ul>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">花语</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">花期</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">花卉养生</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">运势花卉</a><br/>
+	   </li>
+	   <li>
+	      <a href="https://www.baidu.com" classs="LliFont2">花卉种植</a><br/>
+	   </li>
+    </ul>
+  </div>
+ </div>
+<!--****************************************上部文字栏**************************************************-->
+<div class="TwenziDiv" id="Twenzi"><!--*导航栏下放“为成就你的爱”的Div*-->
+<div class="TwenziDiv1">
+只
+</div>
+<div class="TwenziDiv2">
+为
+</div>
+<div class="TwenziDiv3">
+成
+</div>
+<div class="TwenziDiv4">
+就
+</div>
+<div class="TwenziDiv5">
+你
+</div>
+<div class="TwenziDiv6">
+的</div>
+<div class="TwenziDiv7">
+爱
+</div>
+<div class="TimgDiv"><!--*放下小翅膀图片的Div*-->
+<img style="width:80px; height:80px;" src="resource/xiaochibang.jpg" /></div>
+</div>
+<!--****************************************左侧文字栏**************************************************-->
+<div class="LwenziDiv" id="Lwenzi"><!--*放皮卡丘和“专属你的花田”文字的Div*-->
+  <img src="resource/1.png" id="pikaqiu" style="positon:absolute;"/><!--*动图皮卡丘*-->
+               <div class="LwenziDiv1">
+				专
+               </div>
+  
+     <div class="LwenziDiv2">
+	 属
+     </div>
+  
+          <div class="LwenziDiv3">
+	       你
+          </div>
+  
+              <div class="LwenziDiv4">
+	           的
+              </div>
+  
+       <div class="LwenziDiv5">
+	   花
+      </div>
+  
+  <div class="LwenziDiv6">
+  田
+  </div>
+</div>
+<!--****************************************中间展示栏****************************************-->
+<div id="centerDiv" class="centerDiv"><!--*装六张图片的Div*-->
+ <ul class="centerUl" id="centerUl">
+   <li>
+   <div><a href="https://florajj.tmall.com/search.htm?spm=a220m.1000858.1000725.3.z0KAft&rn=bd41f5796a40e3b21602c4f4fc7c3e91&keyword=%C3%B5%B9%E5%BB%A8&user_number_id=2219832325"><img title="康乃馨花田" src="resource/fensekangnaixin.jpg"/></a></div>
+   <div><a href="https://florajj.tmall.com/search.htm?spm=a220m.1000858.1000725.3.z0KAft&rn=bd41f5796a40e3b21602c4f4fc7c3e91&keyword=%C3%B5%B9%E5%BB%A8&user_number_id=2219832325"><img title="向日葵花田" src="resource/xiangrikui.jpg"/></a></div>
+   <div><a href="https://florajj.tmall.com/search.htm?spm=a220m.1000858.1000725.3.z0KAft&rn=bd41f5796a40e3b21602c4f4fc7c3e91&keyword=%C3%B5%B9%E5%BB%A8&user_number_id=2219832325"><img title="百合花田" src="resource/xiangshuibaihe.jpg"/></a></div>
+   </li>
+   <li>
+   <div><a href="https://florajj.tmall.com/search.htm?spm=a220m.1000858.1000725.3.z0KAft&rn=bd41f5796a40e3b21602c4f4fc7c3e91&keyword=%C3%B5%B9%E5%BB%A8&user_number_id=2219832325"><img title="蓝色妖姬花田" src="resource/lanseyaoji.jpg"/></a></div>
+   <div><a href="https://florajj.tmall.com/search.htm?spm=a220m.1000858.1000725.3.z0KAft&rn=bd41f5796a40e3b21602c4f4fc7c3e91&keyword=%C3%B5%B9%E5%BB%A8&user_number_id=2219832325"><img title="玫瑰花田" src="resource/meiguihuashu.jpg"/></a></div>
+   <div><a href="https://florajj.tmall.com/search.htm?spm=a220m.1000858.1000725.3.z0KAft&rn=bd41f5796a40e3b21602c4f4fc7c3e91&keyword=%C3%B5%B9%E5%BB%A8&user_number_id=2219832325"><img title="小盆栽花田" src="resource/duorouzuhe.jpg"/></a></div>
+   </li>
+ </ul>
+</div>
+<!--****************************************右侧"每日一花"区*************************************-->
+<div class="RlogonDiv">
+  <div class="everydayTitle"><!--*放“每日一花”文字Div*-->
+  每日一花
+  </div>
+  <div class="littleTitle"><!--*放“Every day flower”文字Div*-->
+  Every day a flower
+  </div>
+  <div class="everydayImg"><!--*放打折花卉的Div*-->
+  <a href="https://www.baidu.com"><img style="position:absolute; left:30px; top:20px" src="resource/meiriyihua.jpg" /></a>
+  </div>
+  <div class="saleprice"><!--*放“4.1折”文字Div*-->
+  4.1折
+  </div>
+  <div class="price"><!--*放“388”和“￥ 159”文字Div*-->
+  <s class="oldprice">388</s>
+  <span class="nowprice"><sup>￥</sup>159</span>
+  </div>
+  <div class="songhua">
+  <a href="https://www.baidu.com" style="color:#FFFFFF;">百合鲜花全国同城花店送花</a><!--*放链接文字Div*-->
+  </div>
+</div>
+<!--****************************************第一层菜单区***************************************-->
+<div class="showF1Div"><!--*F1最外层的Div*-->
+   <div class="showTFont">F1 鲜花速递</div><!--*放“F1 鲜花速递”文字的Div*-->
+   <div class="showtFont">Flowers Express</div><!--*放“Flowers Express”文字的Div*-->
+   <div class="showfDiv"><!--*F1第二层的Div*-->
+      <div class="showImg1Div"><!--*F1左边第一张大图片的Div*-->
+         <a href="https://www.baidu.com"><img src="resource/xianhuasudi1.jpg" /></a>	  </div>
+	  <div class="showimgDiv1"><!--*F1左上部分小图片和文字的Div*-->
+	  <div class="imgDiv"><!--*F1左上部分小图片的Div*-->
+	  <a href="https://www.baidu.com"><img src="resource/xianhuasudi1.1.jpg" /></a>	  </div>
+	  <div class="weiziDiv"><!--*F1左上部分文字的Div*-->
+	  11朵红玫瑰礼盒</div>
+	  <div class="linkDiv"><!--*F1左上部分链接文字的Div*-->
+	  <a href="https://www.baidu.com" style="color:#FF66FF;">幸福开始的地方 为爱勇敢</a>	  </div>
+	  <div class="priceDiv"><!--*F1左上部分价格的Div*-->
+	  ￥ 149	  </div>
+	  </div>
+	 
+	  <div class="showimgDiv2"><!--*F1左下部分小图片和文字的Div*-->
+	  <div class="imgDiv"><!--*F1左下部分小图片的Div*-->
+	  <a href="https://www.baidu.com"><img src="resource/xianhuasudi1.2.jpg" /></a>	  </div>
+	  <div class="weiziDiv"><!--*F1左下部分文字的Div*-->
+	  全国同城百合花</div>
+	  <div class="linkDiv"><!--*F1左下部分链接文字的Div*-->
+	  <a href="https://www.baidu.com" style="color:#FF66FF;">同城花店百合花 更早遇见</a>	  </div>
+	  <div class="priceDiv"><!--*F1左下部分价格的Div*-->
+	  ￥ 128</div>
+	  </div>
+	  
+	  <div class="showimgDiv3"><!--*F1中间上部分小图片和文字的Div*-->
+	  <div class="imgDiv"><!--*F1中间上部分小图片的Div*-->
+	  <a href="https://www.baidu.com"><img src="resource/xianhuasudi1.3.jpg" /></a>	  </div>
+	  <div class="weiziDiv"><!--*F1中间上部分文字的Div*-->
+	  全国同城玫瑰花</div>
+	  <div class="linkDiv"><!--*F1中间上部分链接文字的Div*-->
+	  <a href="https://www.baidu.com" style="color:#FF66FF;">99朵玫瑰的承诺 大声说爱</a>	  </div>
+	  <div class="priceDiv"><!--*F1中间上部分价格的Div*-->
+	  ￥ 118</div>
+	  </div>
+	  
+	  <div class="showimgDiv4"><!--*F1中间下部分小图片和文字的Div*-->
+	  <div class="imgDiv"><!--*F1中间下部分小图片的Div*-->
+	  <a href="https://www.baidu.com"><img src="resource/xianhuasudi1.4.jpg" /></a>	  </div>
+	  <div class="weiziDiv"><!--*F1中间下部分文字的Div*-->
+	  roseonly一生只送一次</div>
+	  <div class="linkDiv"><!--*F1中间下部分链接文字的Div*-->
+	  <a href="https://www.baidu.com" style="color:#FF66FF;">肯尼亚进口 12支黄金玫瑰礼盒</a>	  </div>
+	  <div class="priceDiv"><!--*F1中间下部分价格的Div*-->
+	  ￥ 999</div>
+	  </div>
+	  
+	  <div class="F1RsaleDiv"><!--*F1右边特价区的Div*-->
+	  <div class="titleDiv"><!--*F1右边“每日特价”文字的Div*-->
+	  <span class="RtitleFont">&nbsp;&nbsp;&nbsp;&nbsp;每日活动</span>
+	  </div>
+	  
+	  <div class="RsaleDiv1">
+	  <div class="RsaleimgDiv">
+	  <a href="https://www.baidu.com"><img src="resource/F1right1.jpg" /></a>
+	  </div>
+	  <div class="RsalewenziDiv1">
+	  <a href="https://www.baidu.com" style="color:#000000">喜鹊缘旗舰店</a>
+	  </div>
+	  <div class="RsalewenziDiv2">
+	  <a href="https://www.baidu.com" style="color:#FF66FF;;">更多优惠等着你</a>
+	  </div>
+	  </div>
+	  
+	  <div class="RsaleDiv2">
+	  <div class="RsaleimgDiv">
+	  <a href="https://www.baidu.com"><img src="resource/F1right2.jpg" /></a>
+	  </div>
+	  <div class="RsalewenziDiv1">
+	  <a href="https://www.baidu.com" style="color:#000000">roseonly旗舰店</a>
+	  </div>
+	  <div class="RsalewenziDiv2">
+	  <a href="https://www.baidu.com" style="color:#FF66FF;;">独享最高积分</a>
+	  </div>
+	  </div>
+	  
+	  <div class="RsaleDiv3">
+	  <div class="RsaleimgDiv">
+	  <a href="https://www.baidu.com"><img src="resource/F1right3.jpg" /></a>
+	  </div>
+	  <div class="RsalewenziDiv1">
+	  <a href="https://www.baidu.com" style="color:#000000">梦馨鲜花旗舰店</a>
+	  </div>
+	  <div class="RsalewenziDiv2">
+	  <a href="https://www.baidu.com" style="color:#FF66FF;;">满150送可爱公仔</a>
+	  </div>
+	  </div>
+  </div>
+</div>
+</div>
+<!--****************************************第二层菜单区****************************************-->
+<div class="showF2Div"><!--*F2最外层Div*-->
+   <div class="showTFont">F2 绿植盆栽</div>
+   <div class="showtFont">Green plant pot</div>
+   <div class="showfDiv"><!--*F2第二层Div*-->
+      <div class="showImg1Div"><!--*F左边大图的Div*-->
+         <a href="https://www.baidu.com"><img src="resource/lvzhipenzai1.jpg"/></a>	  </div>
+	  <div class="showimgDiv1"><!--*F2右上部分小图片和文字的Div*-->
+	  <div class="imgDiv">
+	  <a href="https://www.baidu.com"><img src="resource/lvzhipenzai1.1.jpg" /></a>	  </div>
+	  <div class="weiziDiv">
+	  山地玫瑰防辐射</div>
+	  <div class="linkDiv">
+	  <a href="https://www.baidu.com" style="color:#FF66FF;">更易存活&nbsp;且防辐射</a>	  </div>
+	  <div class="priceDiv">
+	  ￥ 17.9	  </div>
+	  </div>
+	  
+	  <div class="showimgDiv2"><!--*F右下部分小图片和文字的Div*-->
+	  <div class="imgDiv">
+	  <a href="https://www.baidu.com"><img src="resource/lvzhipenzai1.2.jpg" /></a>	  </div>
+	  <div class="weiziDiv">
+	  DIY多肉组合</div>
+	  <div class="linkDiv">
+	  <a href="https://www.baidu.com" style="color:#FF66FF;">绿植花卉&nbsp;室内盆景</a>	  </div>
+	  <div class="priceDiv">
+	  ￥ 59</div>
+	  </div>
+	  
+	  <div class="showimgDiv3"><!--*F2中间上部分小图片和文字的Div*-->
+	  <div class="imgDiv">
+	  <a href="https://www.baidu.com"><img src="resource/lvzhipenzai1.3.jpg" /></a>	  </div>
+	  <div class="weiziDiv">
+	  荷兰进口品种，养护简易</div>
+	  <div class="linkDiv">
+	  <a href="https://www.baidu.com" style="color:#FF66FF;">吸毒王金钻&nbsp;能吸甲醛</a>	  </div>
+	  <div class="priceDiv">
+	  ￥ 29.9</div>
+	  </div>
+	  
+	  <div class="showimgDiv4"><!--*F2中间下部分小图片和文字的Div*-->
+	  <div class="imgDiv">
+	  <a href="https://www.baidu.com"><img src="resource/lvzhipenzai1.4.jpg" /></a>	  </div>
+	  <div class="weiziDiv">
+	  自动吸水盆栽</div>
+	  <div class="linkDiv">
+	  <a href="https://www.baidu.com" style="color:#FF66FF;">容易养，好存活</a>	  </div>
+	  <div class="priceDiv">
+	  ￥ 49.5</div>
+	  </div>
+	  
+	  <div class="F1RsaleDiv"><!--*F2右部分特价区的Div*-->
+	  <div class="titleDiv">
+	  <span class="RtitleFont">&nbsp;&nbsp;&nbsp;&nbsp;每日活动</span>
+	  </div>
+	  
+	  <div class="RsaleDiv1">
+	  <div class="RsaleimgDiv">
+	  <a href="https://www.baidu.com"><img src="resource/F2right1.jpg" /></a>
+	  </div>
+	  <div class="RsalewenziDiv1">
+	  <a href="https://www.baidu.com" style="color:#000000">镜绿旗舰店</a>
+	  </div>
+	  <div class="RsalewenziDiv2">
+	  <a href="https://www.baidu.com" style="color:#FF66FF;;">多肉植物艺术家</a>
+	  </div>
+	  </div>
+	  
+	  <div class="RsaleDiv2">
+	  <div class="RsaleimgDiv">
+	  <a href="https://www.baidu.com"><img src="resource/F2right2.jpg" /></a>
+	  </div>
+	  <div class="RsalewenziDiv1">
+	  <a href="https://www.baidu.com" style="color:#000000">萌肉肉旗舰店</a>
+	  </div>
+	  <div class="RsalewenziDiv2">
+	  <a href="https://www.baidu.com" style="color:#FF66FF;;">满50包邮</a>
+	  </div>
+	  </div>
+	  
+	  <div class="RsaleDiv3">
+	  <div class="RsaleimgDiv">
+	  <a href="https://www.baidu.com"><img src="resource/F2right3.jpg" /></a>
+	  </div>
+	  <div class="RsalewenziDiv1">
+	  <a href="https://www.baidu.com" style="color:#000000">花青枫旗舰店</a>
+	  </div>
+	  <div class="RsalewenziDiv2">
+	  <a href="https://www.baidu.com" style="color:#FF66FF;;">绿植就是花青枫</a>
+	  </div>
+	  </div>
+  </div>
+</div>
+</div>
+
+<!--****************************************第三层菜单区****************************************-->
+<div class="showF3Div"><!--*F3第一层Div*-->
+   <div class="showTFont">F3 花卉包装</div>
+   <div class="showtFont">Flower packaging</div>
+<div class="showfDiv"><!--*F3第二层Div*-->
+    <div class="f3showDiv1"><!--*F3左上部分大图的Div*-->
+     <div class="f3imgDiv1">
+     <a href="https://www.baidu.com"><img style="width:380px;height:160px;position:absolute;" src="resource/huahuibaozhuang2.jpg" /></a>
+     </div>
+     <div class="f3wenziDiv1_1">
+      <span class="f3wenziFont1_1">花卉</span><span style="font-weight:bold;color:#FFFFFF; font-size:22px;">包装</span>
+     </div>
+	 <div class="f3wenziDiv1_2">
+	 <span class="f3wenziFont1_2">&nbsp;|用心去表达爱 &nbsp;|</span>
+	 </div>
+    </div>
+	<div class="f3showDiv2"><!--*F3左下部分小图片和文字的Div*-->
+	<div class="f3imgDiv2">
+	<a href="https://www.baidu.com"><img style="width:200px; height:200px;" src="resource/huahuibaozhuang3.jpg"/></a>
+	</div>
+	<div class="f3wenziDiv2_1">
+	独家原创&nbsp;不一样的礼物
+	</div>
+	<div class="f3wenziDiv2_2">
+	  <a href="https://www.baidu.com" style="color:#FF66FF;">送一份专属的礼物</a>	  </div>
+	 <div class="f3price2Div">
+	  ￥ 149.5</div>
+	</div>
+	
+	<div class="f3showDiv3"><!--*F3中间下部分小图片和文字的Div*-->
+	<div class="f3imgDiv2">
+	<a href="https://www.baidu.com"><img style="width:200px; height:200px;" src="resource/huahuibaozhuang5.jpg"/></a>
+	</div>
+	<div class="f3wenziDiv2_1">
+	更多场合的选择
+	</div>
+	<div class="f3wenziDiv2_2">
+	  <a href="https://www.baidu.com" style="color:#FF66FF;">节假日更优惠</a>	  </div>
+	 <div class="f3price2Div">
+	  ￥ 179.5</div>
+	</div>
+	<div class="f3showDiv4"><!--*F3中间上部分特价区的Div*-->
+	 <div class="f3saletitleDiv">
+	  <span class="f3saletitleFont">每</span>
+	  <span class="f3saletitleFont">日</span>
+	  <span class="f3saletitleFont">活</span>
+	  <span class="f3saletitleFont">动</span>	  </div>
+	
+	  <div class="f3saleshowDiv1">
+	     <div class="f3saleimgDiv1">
+	     <a href="https://www.baidu.com"><img style="width:120px; height:120px;" src="resource/huahuibaozhuang1.png" /></a>	    
+		 </div>
+		 <div class="f3salewenziDiv1_1">
+	     喜喆顺旗舰店	    </div>
+	     <div class="f3salewenziDiv1_2">
+	     <a href="https://www.baidu.com" style="color:#FF66FF;">喜喆顺旗舰店</a>	    
+		 </div>
+	     <div class="f3saleprice1Div">
+	     ￥  29	    
+		 </div>
+      </div>
+		
+	  <div class="f3saleshowDiv2">
+	    <div class="f3saleimgDiv2">
+	    <a href="https://www.baidu.com"><img style="width:120px; height:120px;" src="resource/huahuibaozhuang6.jpg" /></a>
+	    </div>
+		<div class="f3salewenziDiv1_1">
+	    橡树庄园旗舰店	    </div>
+	    <div class="f3salewenziDiv1_2">
+	    <a href="https://www.baidu.com" style="color:#FF66FF;">买三送一</a>	    
+		</div>
+	    <div class="f3saleprice1Div">
+	    ￥  25.9	    
+		</div>
+	 </div>
+	</div>
+	<div class="f3showDiv5"><!--*F3部分右下部分图片和文字的Div*-->
+	<div class="f3imgDiv5">
+	<a href="https://www.baidu.com"><img style="width:358px; height:210px;" src="resource/huahuibaozhuang7.jpg" /></a>
+	</div>
+	<div class="f3wenziDiv5_1">
+	选材更优质，为你更用心	</div>
+	<div class="f3wenziDiv5_2">
+	  <a href="https://www.baidu.com" style="color:#FF66FF;">送手写卡片</a>	  </div>
+	 <div class="f3price5Div">
+	  ￥ 339</div>
+	</div>
+  </div>
+</div>
+</div>
+<div id="backTopDiv"><!--*返回顶部的Div*-->
+<a href="#"><img class="backImgDiv" onclick="BackTop()" src="resource/backtop.png" /></a></div>
+
+<div class="bottomDiv"><!--*底部文字的Div*-->
+<div class="link1Div">
+<a href="https://www.baidu.com" class="link1Font">关于御花坊</a></div>
+<div class="link2Div">
+<a href="https://www.baidu.com" class="link1Font">帮助中心</a></div>
+<div class="link3Div">
+<a href="https://www.baidu.com" class="link1Font">联系我们</a></div>
+<div class="link4Div">
+<a href="https://www.baidu.com" class="link1Font">法律声明</a></div>
+<div class="link5Div">
+<a href="https://www.baidu.com" class="link1Font">廉正举报</a></div>
+<span class="banquan">@2013081421 版权所有</span>
+</div>
+</body>
+</html>
